@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Расписание</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Расписание</h1>
+      <p>Веб-приложение для просмотра расписания</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <div class="field">
+        <label for="mode">Режим просмотра</label>
+        <select id="mode">
+          <option value="group">По группе</option>
+        </select>
+      </div>
+
+      <div class="field" id="groupField">
+        <label for="groupSelect">Группа</label>
+        <select id="groupSelect">
+          <option value="">Выберите группу</option>
+          <option value="1213641978">6413-100503D</option>
+          <option value="1282690279">6412-100503D</option>
+          <option value="1282690301">6411-100503D</option>
+        </select>
+      </div>
+
+
+      <div class="field">
+        <label for="weekSelect">Учебная неделя</label>
+        <select id="weekSelect"></select>
+      </div>
+
+      <div class="field action-field">
+        <button id="loadBtn">Показать</button>
+      </div>
+    </section>
+
+    <section class="legend">
+      <span class="tag lecture">лекция</span>
+      <span class="tag practice">практика</span>
+      <span class="tag lab">лабораторная</span>
+      <span class="tag exam">экзамен</span>
+      <span class="tag test">зачёт</span>
+      <span class="tag consult">консультация</span>
+      <span class="tag other">другое</span>
+    </section>
+
+    <section id="statusBox" class="status">Загрузка...</section>
+
+    <section id="scheduleInfo" class="schedule-info"></section>
+
+    <section id="scheduleGrid" class="schedule-grid"></section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
